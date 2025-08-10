@@ -1,0 +1,109 @@
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #1e1e2d;
+    color: #d1d5db;
+}
+.discord-channel {
+    background-color: #36393f;
+    border-radius: 8px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.discord-message {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+.discord-message-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #1e1e2d;
+}
+.discord-message-content {
+    flex-grow: 1;
+}
+.discord-message-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    line-height: 1.2;
+}
+.discord-message-user {
+    color: #ffffff;
+    font-weight: 600;
+}
+.discord-message-timestamp {
+    color: #72767d;
+    font-size: 12px;
+}
+.discord-message-text {
+    color: #dcddde;
+    font-size: 15px;
+}
+.discord-embed {
+    background-color: #2f3136;
+    border-radius: 4px;
+    padding: 12px;
+    display: flex;
+    border-left: 4px solid;
+    gap: 16px;
+    margin-top: 8px;
+    min-height: 100px;
+}
+.discord-embed-content {
+    flex-grow: 1;
+}
+.discord-embed-author {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+.discord-embed-author-icon {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+}
+.discord-embed-author-name {
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 14px;
+}
+.discord-embed-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 8px;
+}
+.discord-embed-description {
+    font-size: 14px;
+    color: #dcddde;
+    margin-bottom: 8px;
+}
+.discord-embed-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 8px;
+}
+.discord-embed-thumbnail {
+    width: 64px;
+    height: 64px;
+    border-radius: 4px;
+}
+.discord-embed-footer {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 8px;
+    font-size: 12px;
+    color: #72767d;
+}
+.discord-embed-footer-icon {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+}

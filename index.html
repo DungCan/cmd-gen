@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Command Generator</title>
+    <!-- set icon web -->
+    <link rel="icon" href="https://cdn.discordapp.com/avatars/1314513638442401822/a_fa3e851e5ad200fa4a77cc8432c69a42.gif?size=4096" type="image/gif">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="p-8 flex flex-col items-center">
+    <div class="max-w-7xl w-full flex flex-col md:flex-row gap-8">
+        <!-- Left Column: Command Builder -->
+        <div class="w-full md:w-1/2 bg-[#2a2a3e] p-8 rounded-2xl shadow-xl">
+            <h1 class="text-3xl font-bold text-center text-white mb-6">Tạo Lệnh `/custom` cho Bot Discord</h1>
+            <p class="text-center text-gray-400 mb-8">
+                Điền các thông tin để tạo một lệnh tùy chỉnh mới.
+            </p>
+            
+            <!-- Command Type & Style -->
+            <div class="bg-[#3b3b55] p-6 rounded-lg">
+                <h2 class="text-xl font-semibold text-white mb-4">Kiểu Lệnh & Định dạng</h2>
+                <div class="space-y-4">
+                    <div>
+                        <label for="command-type" class="block text-sm font-medium text-gray-300">Loại lệnh (`/custom`) </label>
+                        <select id="command-type" class="mt-1 block w-full px-4 py-2 bg-[#4b4b66] border border-[#5c5c7d] rounded-lg focus:outline-none focus:ring-purple-500 focus:border-purple-500 text-white">
+                            <option value="type">type</option>
+                            <option value="toggle">toggle</option>
+                            <option value="text">text</option>
+                            <option value="embed">embed</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dynamic Content Form -->
+            <div id="dynamic-content-form" class="bg-[#3b3b55] p-6 rounded-lg">
+                <!-- Dynamic form based on `command-type` -->
+            </div>
+            
+
+            <!-- Generate and Output Section -->
+            <div>
+                <button id="generate-btn" class="w-full px-4 py-3 mt-8 bg-green-600 text-white font-bold rounded-lg shadow-lg hover:bg-green-700 transition-colors duration-200">
+                    Tạo Lệnh
+                </button>
+                
+                <div class="mt-6 relative">
+                    <textarea id="output-code" rows="5" readonly class="mt-1 block w-full px-4 py-2 bg-[#1b1b2a] border border-[#2c2c42] rounded-lg shadow-inner text-gray-200 placeholder-gray-500 focus:outline-none resize-none font-mono"></textarea>
+                    <button id="copy-btn" class="absolute top-3 right-3 px-3 py-1 bg-gray-600 text-white text-sm rounded-lg shadow-md hover:bg-gray-700 transition-colors duration-200">
+                        Sao chép
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Column: Live Preview -->
+        <div class="w-full md:w-1/2 bg-[#2a2a3e] p-8 rounded-2xl shadow-xl">
+            <h2 class="text-xl font-semibold text-white mb-4">Xem trước (Preview)</h2>
+            <div id="preview-container" class="discord-channel">
+                <!-- Preview content will be rendered here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom message box for copy confirmation -->
+    <div id="message-box" class="fixed bottom-8 left-1/2 -translate-x-1/2 px-6 py-3 bg-purple-600 text-white rounded-full shadow-lg opacity-0 transition-opacity duration-300 pointer-events-none">
+        Đã sao chép!
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
